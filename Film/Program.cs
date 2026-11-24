@@ -26,7 +26,7 @@ namen_reeksen = filmReeksen.Select(r => r.Naam).ToList();
 
 
 
-// alle personages (naam rol) in The Lord of the Rings
+// alle personages (naam rol) in de trilogie The Lord of the Rings
 
 
 // films met Hugo Weaving
@@ -62,10 +62,7 @@ namen_reeksen = filmReeksen.Select(r => r.Naam).ToList();
 // zijn alle films in de 19e eeuw uitgekomen?
 
 
-// toon per reeks de titels van de films
-
-
-// toon alle films gesorteerd eerst volgens releasejaar (klein naar groot), en vervolgens alfabetisch op titel
+// toon per reeks de titels van de films (bv. Star Wars: A New Hope, The Empire Strikes Back, Return of the Jedi)
 
 
 // toon alle film van met Hugo Weaving (acteur)
@@ -77,4 +74,15 @@ namen_reeksen = filmReeksen.Select(r => r.Naam).ToList();
 // toon alle films van Peter Jackson met Hugo Weaving
 
 
-// toon alle rollen van The Hobbit, met per rol de verschillende acteurs die die rol hebben vertolkt
+// toon alle rollen van The Hobbit, met per rol de verschillende acteurs die die rol hebben vertolkt (bv. Bilo Baggins: Ian Holm, Martin Freeman). Het kan zijn dat rollen meerdere keren voorkomen met een ander aantal acteurs
+
+var rollen_hobbit = filmReeksen.Where(f => f.Naam.Equals("The hobbit", StringComparison.CurrentCultureIgnoreCase))
+    .SelectMany(r => r.Films)
+    .SelectMany(f => f.Rollen)
+    .Select(r => $"{r.Naam}: {string.Join(", ", r.Acteurs.Select(a => $"{a.Voornaam} {a.Naam}"))}")
+    .ToList();
+
+Console.WriteLine();
+
+
+// 

@@ -1,3 +1,7 @@
 <Solution>
+  <Project Path="F1/F1/F1.csproj" />
+  <Project Path="Film/Films.csproj" />
+  <Project Path="Game/Games.csproj" />
   <Project Path="Oefeningen LINQ/Oefeningen LINQ.csproj" />
+  <Project Path="Zonnestelsel - Select, SelectMany, Where/Zonnestelsel - Select, SelectMany, Where.csproj" />
 </Solution>

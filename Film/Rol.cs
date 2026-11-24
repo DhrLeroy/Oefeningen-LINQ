@@ -8,7 +8,7 @@ namespace Films.Classes
 {
     public class Rol
     {
-        public List<Film> Films { get; set; } // A role exists in multiple films
+        public List<Film> Films { get; set; }
         public string Naam { get; set; }
         public List<Acteur> Acteurs { get; set; }
 

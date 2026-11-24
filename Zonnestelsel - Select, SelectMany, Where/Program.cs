@@ -36,6 +36,7 @@ var manen = File.ReadAllLines("moons.csv").Skip(1).Select(m => new Maan(m, plane
 
 // Oefening 1.13 - Planeten zonder manen: Maak een lijst met alle planeten die geen enkele maan hebben.
 
+
 // Deel 2 – Select: gegevens omvormen
 //Bij deze oefeningen maak je nieuwe resultaten op basis van bestaande objecten. Je hoeft dus niet noodzakelijk de volledige objecten te behouden.
 
@@ -129,3 +130,6 @@ var manen = File.ReadAllLines("moons.csv").Skip(1).Select(m => new Maan(m, plane
 // Earth - 12742 km - Planeet
 // Io - 3643.2 km - Maan
 // Ceres - 939.4 km - Asteroïde
+
+
+// Oefening 4.7 - Per planeet de verhouding van de diameter van de manen en de planeet. Bv. Earth. Verhouding diameter manen/planeet: 27,27%
